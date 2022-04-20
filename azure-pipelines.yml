@@ -16,15 +16,6 @@ variables:
 
 steps:
 
--task: DotNetCoreCLI@2
-  inputs:
-    command: test
-    project: '**/*Test/*.csproj'
-    arguments: '--configuation $(buildConfiguration)'
-
--script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
-
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
